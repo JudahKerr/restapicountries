@@ -4,17 +4,36 @@ body {
     margin: 0;
     font-family: $font;
     font-weight: $light;
+    background-color: $veryLightGray;
+}
 
+#light {
+
+    color: $veryDarkBlue;
+
+
+    background-color: $veryLightGray;
+
+}
+
+#dark {
+   
+        color: $white !important;
+  
+
+   
+        background-color: $veryDarkBlueBg;
+ 
 }
 
 .navbar {
     width: 100%;
-    height: 120px;
+    height: 90px;
     background-color: $white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow:  0px 0px 10px 2px rgb(109, 108, 108);
+    box-shadow: 0px 0px 10px 2px rgb(109, 108, 108);
 
 }
 
@@ -28,10 +47,107 @@ body {
     margin-right: 5%;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .darkModeDiv span {
     font-size: 1.25rem;
     margin-left: 10px;
     font-weight: $bold;
+}
+
+
+
+.form-control {
+
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+    height: 200px;
+
+}
+
+.form-control input {
+    height: 80px;
+    width: 30%;
+    border-radius: 5px;
+    border-style: none;
+    box-shadow: 0px 0px 10px 2px rgb(148, 146, 146);
+
+    padding-left: 20px;
+    font-family: $font;
+    font-size: 1.5rem;
+    text-indent: 50px;
+}
+
+.form-control input:focus {
+    outline: none;
+}
+
+
+
+.form-control input::placeholder {
+    font-family: $font;
+    font-size: 1.5rem;
+
+
+    background: url(magnifying-glass-location-solid.svg) no-repeat center left;
+    background-size: 28px;
+    background-position: 0px 2px;
+
+
+}
+
+
+.body-div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    width: 100%;
+    background-color: $veryLightGray;
+    height: fit-content;
+
+}
+
+.countryCard {
+    width: 350px;
+    height: 420px;
+    background-color: $white;
+    margin-left: 20%;
+    border-radius: 10px;
+    margin-top: 0px;
+    box-shadow: 3px 1px 8px 1px rgb(148, 146, 146);
+    margin-bottom: 80px;
+
+}
+
+.countryCard img {
+    height: 200px;
+    width: 350px;
+    border-radius: 10px;
+
+}
+
+.countryCard h2 {
+    padding-left: 20px;
+}
+
+.countryData {
+    padding-left: 20px;
+    font-size: 1.25rem;
+}
+
+.countryData p {
+    font-weight: $bold;
+    font-size: 1.2rem;
+}
+
+.countryData span {
+    font-weight: $light;
+}
+
+.error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

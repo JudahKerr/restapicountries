@@ -3,11 +3,22 @@ body {
   margin: 0;
   font-family: "Nunito Sans", sans-serif;
   font-weight: 300;
+  background-color: hsl(0deg, 0%, 98%);
+}
+
+#light {
+  color: hsl(200deg, 15%, 8%);
+  background-color: hsl(0deg, 0%, 98%);
+}
+
+#dark {
+  color: hsl(0deg, 0%, 100%) !important;
+  background-color: hsl(207deg, 26%, 17%);
 }
 
 .navbar {
   width: 100%;
-  height: 120px;
+  height: 90px;
   background-color: hsl(0deg, 0%, 100%);
   display: flex;
   justify-content: space-between;
@@ -25,10 +36,110 @@ body {
   margin-right: 5%;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .darkModeDiv span {
   font-size: 1.25rem;
   margin-left: 10px;
   font-weight: 800;
+}
+
+.form-control {
+  margin-left: 5%;
+  display: flex;
+  align-items: center;
+  height: 200px;
+}
+
+.form-control input {
+  height: 80px;
+  width: 30%;
+  border-radius: 5px;
+  border-style: none;
+  box-shadow: 0px 0px 10px 2px rgb(148, 146, 146);
+  padding-left: 20px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.5rem;
+  text-indent: 50px;
+}
+
+.form-control input:focus {
+  outline: none;
+}
+
+.form-control input::-moz-placeholder {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.5rem;
+  background: url(magnifying-glass-location-solid.svg) no-repeat center left;
+  background-size: 28px;
+  background-position: 0px 2px;
+}
+
+.form-control input:-ms-input-placeholder {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.5rem;
+  background: url(magnifying-glass-location-solid.svg) no-repeat center left;
+  background-size: 28px;
+  background-position: 0px 2px;
+}
+
+.form-control input::placeholder {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.5rem;
+  background: url(magnifying-glass-location-solid.svg) no-repeat center left;
+  background-size: 28px;
+  background-position: 0px 2px;
+}
+
+.body-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  width: 100%;
+  background-color: hsl(0deg, 0%, 98%);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.countryCard {
+  width: 350px;
+  height: 420px;
+  background-color: hsl(0deg, 0%, 100%);
+  margin-left: 20%;
+  border-radius: 10px;
+  margin-top: 0px;
+  box-shadow: 3px 1px 8px 1px rgb(148, 146, 146);
+  margin-bottom: 80px;
+}
+
+.countryCard img {
+  height: 200px;
+  width: 350px;
+  border-radius: 10px;
+}
+
+.countryCard h2 {
+  padding-left: 20px;
+}
+
+.countryData {
+  padding-left: 20px;
+  font-size: 1.25rem;
+}
+
+.countryData p {
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+.countryData span {
+  font-weight: 300;
+}
+
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=Styles.css.map */
