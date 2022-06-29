@@ -24,7 +24,7 @@ function App() {
   }
 
   function themeChange() {
-    if (theme == "light") {
+    if (theme === "light") {
       setTheme("dark");
     } else {
       setTheme("light");
@@ -32,11 +32,11 @@ function App() {
   }
 
   return (
-    <div id={theme}>
-      <div id="text background">
+    <div>
+      <div>
         <Navbar themeSwitch={themeChange} theme={theme} />
         <SearchForm theme={theme} pullData={pullData} error={handleError} />
-        <div className="body-div">
+        <div id={theme} className="body-div">
           {error ? (
             <Error />
           ) : (
@@ -48,6 +48,7 @@ function App() {
                   region={country.subregion}
                   capital={country.capital}
                   image={country.flags.png}
+                  theme={theme}
                 />
               );
             })

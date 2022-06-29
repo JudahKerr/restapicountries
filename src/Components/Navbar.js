@@ -1,15 +1,23 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSolid, faMoon } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
 
 function Navbar(props) {
-  
+  const [mode, setMode] = useState("Dark Mode");
+
+  function handleClick() {
+    props.themeSwitch();
+    if (mode === "Dark Mode") {
+      setMode("Light Mode");
+    } else {
+      setMode("Dark Mode");
+    }
+  }
 
   return (
     <div id={props.theme} className="navbar">
-      <a>Where in the world?</a>
-      <div className="darkModeDiv" onClick={props.themeSwitch}>
+      <a href="/">Where in the world?</a>
+      <div className="darkModeDiv" onClick={handleClick}>
         <i className="fa-solid fa-moon fa-2x"></i>
-        <span>Dark Mode</span>
+        <span>{mode}</span>
       </div>
     </div>
   );

@@ -1,5 +1,59 @@
 @import "./Variables.scss";
 
+@media (max-width: 1600px) {
+
+    body .body-div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+}
+
+@media (max-width: 1200px) {
+
+    body .body-div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+}
+
+@media (max-width: 820px) {
+
+    body .body-div {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    body .countryCard {
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    body .countryCard img {
+        width: 400px;
+    }
+
+    body .darkModeDiv span {
+        position: absolute;
+        bottom: -2000px;
+    }
+
+    body .form-control {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+    }
+
+}
+
 body {
     margin: 0;
     font-family: $font;
@@ -8,23 +62,54 @@ body {
 }
 
 #light {
-
     color: $veryDarkBlue;
-
-
     background-color: $veryLightGray;
+}
+
+
+#light.body-div {
+    background-color: $veryLightGray;
+}
+
+#light.search-form {
+    background-color: $veryLightGray;
+}
+
+#light.navbar {
+    background-color: $white;
+    box-shadow: 0px 0px 6px 2px rgb(7, 7, 7);
 
 }
 
 #dark {
-   
-        color: $white !important;
-  
-
-   
-        background-color: $veryDarkBlueBg;
- 
+    color: $white;
+    background-color: $veryDarkBlueBg;
 }
+
+
+
+
+#dark.navbar {
+    background-color: $darkBlue;
+}
+
+#dark input {
+    background-color: $darkBlue;
+    color: $white;
+    box-shadow: none;
+}
+
+#dark.countryCard {
+    box-shadow: none;
+    background-color: $darkBlue;
+}
+
+#dark.body-div {
+    background-color: $veryDarkBlueBg  !important;
+    height: 100vh;
+}
+
+
 
 .navbar {
     width: 100%;
@@ -33,15 +118,21 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0px 0px 10px 2px rgb(109, 108, 108);
+    box-shadow: 0px 0px 6px 2px rgb(173, 172, 172);
 
 }
 
 .navbar a {
+    all: unset;
     font-size: 2.5rem;
     font-weight: $bold;
     margin-left: 5%;
+    text-decoration: none;
+    cursor: pointer;
+
 }
+
+
 
 .darkModeDiv {
     margin-right: 5%;
@@ -69,13 +160,14 @@ body {
 
 .form-control input {
     height: 80px;
-    width: 30%;
+    width: 500px;
     border-radius: 5px;
     border-style: none;
-    box-shadow: 0px 0px 10px 2px rgb(148, 146, 146);
+    box-shadow: 0px 0px 6px 2px rgb(173, 172, 172);
 
     padding-left: 20px;
     font-family: $font;
+    font-weight: $normal;
     font-size: 1.5rem;
     text-indent: 50px;
 }
@@ -89,7 +181,7 @@ body {
 .form-control input::placeholder {
     font-family: $font;
     font-size: 1.5rem;
-
+    font-weight: $normal;
 
     background: url(magnifying-glass-location-solid.svg) no-repeat center left;
     background-size: 28px;
@@ -97,6 +189,20 @@ body {
 
 
 }
+
+#dark input::placeholder {
+    font-family: $font;
+    font-size: 1.5rem;
+    font-weight: $normal;
+    color: $white;
+    background: url(magnifying-glass-location-solid.svg) no-repeat center left;
+    background-size: 28px;
+    background-position: 0px 2px;
+
+
+}
+
+
 
 
 .body-div {
@@ -110,20 +216,20 @@ body {
 }
 
 .countryCard {
-    width: 350px;
+    width: 300px;
     height: 420px;
     background-color: $white;
     margin-left: 20%;
     border-radius: 10px;
     margin-top: 0px;
-    box-shadow: 3px 1px 8px 1px rgb(148, 146, 146);
+    box-shadow: 0px 0px 6px 2px rgb(173, 172, 172);
     margin-bottom: 80px;
 
 }
 
 .countryCard img {
     height: 200px;
-    width: 350px;
+    width: 300px;
     border-radius: 10px;
 
 }
@@ -150,4 +256,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 10vh;
+
 }

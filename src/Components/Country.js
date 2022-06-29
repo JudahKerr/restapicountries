@@ -1,6 +1,6 @@
 function Country(props) {
   return (
-    <div className="countryCard">
+    <div id={props.theme} className="countryCard">
       <img src={props.image} alt={props.name}></img>
       <h2>{props.name}</h2>
       <div className="countryData">
